@@ -1,0 +1,232 @@
+/* ===== MAIN CONTAINER ===== */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background: white;
+  /* Enforce white bg */
+}
+
+/* ===== LEFT SIDE (LOGIN CONTENT) ===== */
+.left {
+  width: 50%;
+  background-color: #ffffff;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.left h2 {
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.left .subtitle {
+  margin-bottom: 2rem;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.error-msg {
+  background: #fef2f2;
+  color: #ef4444;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid #fee2e2;
+}
+
+/* Labels */
+.left label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Inputs */
+.left input[type="email"],
+.left input[type="password"] {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.left input:focus {
+  border-color: #6366f1;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Options row */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.options input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.options .forgot {
+  background: none;
+  border: none;
+  color: #6366f1;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== BUTTONS ===== */
+.btn-black,
+.btn-google {
+  width: 100%;
+  padding: 0.9rem 0;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Sign In button */
+.btn-black {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.btn-black:hover {
+  background-color: #1e293b;
+  transform: translateY(-1px);
+}
+
+.divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* Google button */
+.btn-google {
+  margin-top: 0;
+  background-color: #ffffff;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.btn-google img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.8rem;
+}
+
+.btn-google:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Signup text */
+.signup-text {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.signup-text p {
+  margin: 0 0 6px;
+}
+
+.verify-link {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.verify-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== RIGHT SIDE (IMAGE) ===== */
+.right {
+  width: 50%;
+  height: 100vh;
+  background-color: #0e0f14;
+  overflow: hidden;
+}
+
+.right-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== RESPONSIVE (SMALL SCREENS) ===== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    height: auto;
+  }
+
+  .left {
+    padding: 2rem;
+  }
+
+  .right {
+    height: 40vh;
+  }
+}

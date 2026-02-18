@@ -1,0 +1,195 @@
+.map-builder-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: #1a1a1a;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    overflow: hidden;
+}
+
+.builder-header {
+    height: 50px;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #333;
+    z-index: 10;
+}
+
+.builder-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #ffd700;
+}
+
+.builder-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* LEFTSIDE TOOLBAR */
+.builder-toolbar {
+    width: 220px;
+    background: #252525;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.tool-category {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.tool-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #333;
+    border: 1px solid #444;
+    color: #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+}
+
+.tool-btn:hover {
+    background: #444;
+    color: white;
+}
+
+.tool-btn.active {
+    background: #4285F4;
+    border-color: #4285F4;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tool-btn.danger {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+.tool-btn.danger.active {
+    background: #ef4444;
+    color: white;
+}
+
+/* PROPERTIES PANEL (Right side overlays or fixed) */
+.properties-panel {
+    width: 250px;
+    background: #252525;
+    border-left: 1px solid #333;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prop-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.prop-group label {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.color-picker {
+    width: 100%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.canvas-wrapper {
+    flex: 1;
+    position: relative;
+    background: #111;
+    cursor: crosshair;
+}
+
+.loading-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    font-size: 20px;
+    color: #4285F4;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.primary {
+    background: #4285F4;
+    color: white;
+}
+
+button.secondary {
+    background: #444;
+    color: white;
+}
+
+.toast {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #555;
+    z-index: 100;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}

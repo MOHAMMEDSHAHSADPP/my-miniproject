@@ -1,0 +1,543 @@
+.ad-wrap {
+  min-height: 100vh;
+  display: flex;
+  background: #0b1220;
+  color: #fff;
+}
+
+.ad-side {
+  width: 240px;
+  padding: 16px;
+  border-right: 1px solid rgba(255, 255, 255, .10);
+  background: rgba(255, 255, 255, .04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ad-brand {
+  font-weight: 900;
+  font-size: 18px;
+  padding: 10px 10px 14px;
+  letter-spacing: .3px;
+}
+
+.ad-btn {
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .06);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.ad-btn.active {
+  background: #3b82f6;
+  border-color: rgba(59, 130, 246, .8);
+}
+
+.ad-btn.danger {
+  background: #ef4444;
+  border-color: rgba(239, 68, 68, .7);
+}
+
+.ad-spacer {
+  flex: 1;
+}
+
+.ad-main {
+  flex: 1;
+  padding: 18px;
+}
+
+.ad-top {
+  margin-bottom: 14px;
+}
+
+.ad-top h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.ad-sub {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, .65);
+  font-size: 13px;
+}
+
+.ad-card {
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+}
+
+.ad-msg {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.ad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.ad-grid input {
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  background: rgba(0, 0, 0, .22);
+  color: #fff;
+  outline: none;
+}
+
+.ad-primary {
+  grid-column: span 4;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 900;
+}
+
+.ad-row {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ad-row input,
+.ad-row select {
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  background: rgba(0, 0, 0, .22);
+  color: #fff;
+  outline: none;
+}
+
+.ad-secondary {
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 900;
+}
+
+.ad-tableWrap {
+  margin-top: 12px;
+  overflow: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.ad-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  background: rgba(0, 0, 0, .18);
+}
+
+.ad-table th,
+.ad-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, .10);
+  text-align: left;
+  font-size: 14px;
+}
+
+.ad-table thead th {
+  background: rgba(255, 255, 255, .06);
+  font-weight: 900;
+}
+
+.ad-actions button {
+  margin-right: 8px;
+  padding: 7px 10px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  font-weight: 900;
+}
+
+.ad-actions button.danger {
+  background: #ef4444;
+}
+
+.ad-pill {
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  color: #fff;
+}
+
+.ad-pill.ok {
+  background: #22c55e;
+}
+
+.ad-pill.ok {
+  background: #22c55e;
+}
+
+.ad-pill.danger {
+  background: #ef4444;
+}
+
+button.danger {
+  background: #ef4444;
+  color: white;
+  border: 1px solid #dc2626;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.ok {
+  color: #22c55e;
+  font-weight: 900;
+}
+
+.warn {
+  color: #fbbf24;
+  font-weight: 900;
+}
+
+@media (max-width: 980px) {
+  .ad-side {
+    width: 200px;
+  }
+
+  .ad-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ad-primary {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 680px) {
+  .ad-side {
+    display: none;
+  }
+
+  .ad-main {
+    padding: 12px;
+  }
+
+  .ad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-primary {
+    grid-column: span 1;
+  }
+}
+
+.ad-select {
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  padding: 0 12px;
+  background: #fff;
+  color: #0f172a;
+  font-weight: 800;
+  outline: none;
+}
+
+.ad-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.14);
+}
+
+.va-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.va-title {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.va-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-weight: 1000;
+  font-size: 12px;
+}
+
+.va-h {
+  font-weight: 1000;
+  color: #0f172a;
+}
+
+.va-sub {
+  color: #64748b;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.va-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.va-wrap {
+  width: 100%;
+}
+
+.va-grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media(max-width:900px) {
+  .va-grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.va-box {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+}
+
+.va-secTitle {
+  font-weight: 1000;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.va-secMini {
+  margin-top: 10px;
+  font-weight: 1000;
+  color: #334155;
+  font-size: 12px;
+}
+
+.va-form {
+  display: grid;
+  gap: 10px;
+}
+
+.va-in {
+  width: 100%;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  padding: 0 12px;
+  background: #fff;
+  color: #0f172a;
+  outline: none;
+  font-weight: 800;
+}
+
+.va-in:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.14);
+}
+
+textarea.va-in {
+  height: auto;
+}
+
+.va-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.va-file {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px dashed rgba(15, 23, 42, 0.18);
+  background: #f8fafc;
+}
+
+.va-label {
+  font-weight: 900;
+  color: #0f172a;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.va-list {
+  display: grid;
+  gap: 10px;
+}
+
+.va-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+}
+
+.va-itemTitle {
+  font-weight: 1000;
+  color: #0f172a;
+}
+
+.va-itemSub {
+  color: #64748b;
+  font-weight: 800;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.va-itemMain {
+  min-width: 0;
+}
+
+.va-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.va-muted {
+  color: #64748b;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.va-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.va-card {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+@media(max-width:650px) {
+  .va-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.va-cardImg {
+  background: #f1f5ff;
+}
+
+.va-cardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 140px;
+}
+
+.va-imgPh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  color: #64748b;
+  font-weight: 900;
+}
+
+.va-cardBody {
+  padding: 12px;
+}
+
+.va-cardTitle {
+  font-weight: 1000;
+  color: #0f172a;
+}
+
+.va-cardSub {
+  margin-top: 4px;
+  color: #64748b;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.okBtn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 1000;
+  cursor: pointer;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.warnBtn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 1000;
+  cursor: pointer;
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.va-complaint {
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #fff;
+}
+
+.va-complaintTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.va-note {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  font-weight: 900;
+  color: #334155;
+}

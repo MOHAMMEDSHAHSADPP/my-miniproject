@@ -1,0 +1,185 @@
+.admin-chat-container {
+    display: flex;
+    height: calc(100vh - 120px);
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ac-sidebar {
+    width: 250px;
+    border-right: 1px solid #e2e8f0;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+}
+
+.ac-sidebar h3 {
+    padding: 1rem;
+    margin: 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 1rem;
+    color: #475569;
+}
+
+.ac-room-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.ac-room {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.2s;
+}
+
+.ac-room:hover {
+    background: #e2e8f0;
+}
+
+.ac-room.active {
+    background: #eff6ff;
+    border-left: 3px solid #3b82f6;
+}
+
+.ac-room-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+
+.ac-room-meta {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.ac-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ac-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: white;
+    font-weight: 700;
+}
+
+.ac-messages {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ac-empty {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+}
+
+.ac-msg {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ac-msg.mine {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.ac-msg.theirs {
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.ac-bubble {
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ac-msg.mine .ac-bubble {
+    background: #3b82f6;
+    color: white;
+    border-bottom-right-radius: 2px;
+}
+
+.ac-msg.theirs .ac-bubble {
+    background: white;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    border-bottom-left-radius: 2px;
+}
+
+.ac-meta {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 4px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.ac-del {
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.ac-msg:hover .ac-del {
+    opacity: 1;
+}
+
+.ac-img {
+    max-width: 200px;
+    border-radius: 8px;
+    margin-top: 5px;
+    display: block;
+}
+
+.ac-input {
+    padding: 1rem;
+    border-top: 1px solid #e2e8f0;
+    background: white;
+    display: flex;
+    gap: 10px;
+}
+
+.ac-input input {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 24px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+}
+
+.ac-input input:focus {
+    border-color: #3b82f6;
+}
+
+.ac-input button {
+    padding: 0 20px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.ac-input button:hover {
+    background: #2563eb;
+}

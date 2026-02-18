@@ -1,0 +1,7 @@
+Status: 200
+Keys: town, trending, announcements, emergency, popularPlaces, recentPlaces
+Trending count: 1
+Announcements count: 3
+Emergency count: 1
+Popular Places count: 0
+Recent Places count: 0

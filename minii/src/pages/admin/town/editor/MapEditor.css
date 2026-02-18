@@ -1,0 +1,499 @@
+/* ========================================
+   3D Map Editor — Professional Dark Theme
+   ======================================== */
+
+.map-editor {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* ===== TOP BAR ===== */
+.me-topbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    background: #1a1a2e;
+    border-bottom: 1px solid #2a2a3e;
+    min-height: 48px;
+    z-index: 10;
+}
+
+.me-topbar .me-brand {
+    font-weight: 700;
+    font-size: 14px;
+    color: #a78bfa;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.me-topbar .me-version {
+    background: #7c3aed;
+    color: white;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.me-topbar .me-divider {
+    width: 1px;
+    height: 24px;
+    background: #333;
+}
+
+.me-topbar select {
+    background: #252540;
+    color: #e0e0e0;
+    border: 1px solid #3a3a5c;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.me-topbar select:focus {
+    border-color: #7c3aed;
+}
+
+.me-topbar .me-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border: 1px solid #3a3a5c;
+    border-radius: 6px;
+    background: #252540;
+    color: #ccc;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+
+.me-topbar .me-btn:hover {
+    background: #333355;
+    border-color: #555;
+}
+
+.me-topbar .me-btn.primary {
+    background: #7c3aed;
+    color: white;
+    border-color: #7c3aed;
+}
+
+.me-topbar .me-btn.primary:hover {
+    background: #6d28d9;
+}
+
+.me-topbar .me-btn.danger {
+    color: #f87171;
+    border-color: #7f1d1d;
+}
+
+.me-topbar .me-btn.danger:hover {
+    background: #450a0a;
+}
+
+.me-topbar .me-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.me-topbar .me-msg {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    animation: me-fade 3s forwards;
+}
+
+.me-topbar .me-msg.ok {
+    color: #4ade80;
+}
+
+.me-topbar .me-msg.err {
+    color: #f87171;
+}
+
+.me-topbar .me-spacer {
+    flex: 1;
+}
+
+@keyframes me-fade {
+
+    0%,
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ===== WORKSPACE (toolbar + canvas + panel) ===== */
+.me-workspace {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ===== LEFT TOOLBAR ===== */
+.me-toolbar {
+    width: 180px;
+    min-width: 180px;
+    background: #161625;
+    border-right: 1px solid #2a2a3e;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 8px 0;
+}
+
+.me-toolbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.me-toolbar::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.me-tool-cat {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #666;
+    padding: 12px 12px 4px;
+}
+
+.me-tool-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: calc(100% - 12px);
+    margin: 2px 6px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #aaa;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: left;
+}
+
+.me-tool-btn:hover {
+    background: #252540;
+    color: #ddd;
+}
+
+.me-tool-btn.active {
+    background: #7c3aed22;
+    color: #a78bfa;
+    border-left: 3px solid #7c3aed;
+    padding-left: 7px;
+}
+
+.me-tool-btn .icon {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.me-tool-btn .shortcut {
+    margin-left: auto;
+    font-size: 9px;
+    color: #555;
+    background: #1a1a2e;
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+.me-tool-btn.danger {
+    color: #f87171;
+}
+
+.me-tool-btn.danger.active {
+    background: #7f1d1d22;
+    border-left-color: #ef4444;
+}
+
+/* ===== CANVAS ===== */
+.me-canvas-area {
+    flex: 1;
+    position: relative;
+    background: #111;
+    overflow: hidden;
+}
+
+.me-canvas-area canvas {
+    display: block !important;
+}
+
+/* ===== RIGHT PROPERTIES PANEL ===== */
+.me-props {
+    width: 260px;
+    min-width: 260px;
+    background: #161625;
+    border-left: 1px solid #2a2a3e;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 12px;
+}
+
+.me-props::-webkit-scrollbar {
+    width: 4px;
+}
+
+.me-props::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.me-props-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #2a2a3e;
+}
+
+.me-prop-group {
+    margin-bottom: 12px;
+}
+
+.me-prop-group label {
+    display: block;
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.me-prop-group input[type="text"],
+.me-prop-group input[type="number"],
+.me-prop-group textarea,
+.me-prop-group select {
+    width: 100%;
+    background: #1e1e35;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 7px 10px;
+    color: #ddd;
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.15s;
+    box-sizing: border-box;
+}
+
+.me-prop-group input:focus,
+.me-prop-group select:focus,
+.me-prop-group textarea:focus {
+    border-color: #7c3aed;
+}
+
+.me-prop-group input[type="range"] {
+    width: 100%;
+    accent-color: #7c3aed;
+}
+
+.me-prop-group input[type="color"] {
+    width: 36px;
+    height: 36px;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.me-prop-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.me-prop-row>* {
+    flex: 1;
+}
+
+.me-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.me-toggle-row span {
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* Toggle Switch */
+.me-toggle {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.me-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.me-toggle .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.me-toggle .slider:before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.me-toggle input:checked+.slider {
+    background-color: #7c3aed;
+}
+
+.me-toggle input:checked+.slider:before {
+    transform: translateX(16px);
+}
+
+/* Hashtag Section */
+.me-hashtag-section {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #2a2a3e;
+}
+
+/* Event Status Buttons */
+.me-event-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.me-event-btn {
+    padding: 6px 8px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: #1e1e35;
+    color: #aaa;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-align: center;
+}
+
+.me-event-btn:hover {
+    border-color: #555;
+}
+
+.me-event-btn.active {
+    color: white;
+    font-weight: 600;
+}
+
+.me-event-btn.traffic {
+    border-color: #f59e0b;
+    color: #f59e0b;
+}
+
+.me-event-btn.emergency {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+.me-event-btn.accident {
+    border-color: #dc2626;
+    color: #dc2626;
+}
+
+.me-event-btn.closed {
+    border-color: #555;
+    color: #888;
+    background: #222;
+}
+
+/* ===== STATUS BAR ===== */
+.me-statusbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 4px 16px;
+    background: #1a1a2e;
+    border-top: 1px solid #2a2a3e;
+    font-size: 10px;
+    color: #666;
+    min-height: 24px;
+}
+
+.me-statusbar .coord {
+    color: #888;
+    font-family: 'Consolas', monospace;
+}
+
+.me-statusbar .snap {
+    color: #7c3aed;
+}
+
+.me-statusbar .info {
+    color: #4ade80;
+}
+
+.me-statusbar .spacer {
+    flex: 1;
+}
+
+.me-statusbar .count {
+    color: #888;
+}
+
+/* ===== EMPTY STATE ===== */
+.me-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    color: #555;
+}
+
+.me-empty .icon {
+    font-size: 48px;
+}
+
+.me-empty p {
+    font-size: 14px;
+}

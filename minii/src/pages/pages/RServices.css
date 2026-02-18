@@ -1,0 +1,146 @@
+.rservices-container {
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    min-height: 80vh;
+}
+
+.rservices-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rservices-header h2 {
+    margin: 0;
+    color: #2a214f;
+}
+
+.btn-new {
+    background: #2a214f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.rservices-form-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+}
+
+.rservices-form-card label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.rservices-form-card input,
+.rservices-form-card select,
+.rservices-form-card textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+    margin-bottom: 10px;
+}
+
+.btn-submit {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.rservices-tabs {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.rservices-tabs button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #4a5568;
+    cursor: pointer;
+}
+
+.rservices-tabs button.active {
+    background: #2a214f;
+    color: white;
+    border-color: #2a214f;
+}
+
+.rservices-list {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.rservices-card {
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+    border-radius: 12px;
+    background: white;
+}
+
+.rservices-card.pending {
+    border-left: 4px solid #f6e05e;
+}
+
+.rservices-card.completed {
+    border-left: 4px solid #48bb78;
+}
+
+.rservices-card.rejected {
+    border-left: 4px solid #f56565;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-top h4 {
+    margin: 0;
+    color: #2d3748;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-badge.Pending {
+    background: #fefcbf;
+    color: #b7791f;
+}
+
+.status-badge.Completed {
+    background: #c6f6d5;
+    color: #2f855a;
+}
+
+.status-badge.Rejected {
+    background: #fed7d7;
+    color: #c53030;
+}

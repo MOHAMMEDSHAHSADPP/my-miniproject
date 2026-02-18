@@ -1,0 +1,5 @@
+[dotenv@17.2.3] injecting env (3) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+✅ LOADED: Routes/VisitorAdminRoutes.js
+✅ Backend running on 8081
+✅ MongoDB connected
+^C

@@ -1,0 +1,50 @@
+.re-wrap{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.re-card{
+  width:min(520px, 92vw);
+  background:rgba(255,255,255,0.85);
+  border:1px solid rgba(120,80,255,0.15);
+  border-radius:18px;
+  padding:26px;
+  box-shadow:0 10px 30px rgba(40,20,120,0.12);
+}
+.re-badge{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  background:#efeaff;
+  color:#5a43c9;
+  font-weight:600;
+  font-size:12px;
+}
+.re-card h2{ margin:10px 0 4px; color:#3a2b7a; }
+.re-sub{ margin:0 0 16px; color:#6b5aa6; }
+
+.re-label{ display:block; margin:10px 0 6px; color:#5a4d8b; font-weight:600; }
+.re-select{
+  width:100%;
+  height:44px;
+  border-radius:12px;
+  border:1px solid rgba(120,80,255,0.25);
+  padding:0 12px;
+  outline:none;
+  background:#fff;
+}
+
+.re-btn{
+  width:100%;
+  margin-top:14px;
+  height:44px;
+  border:none;
+  border-radius:999px;
+  background:linear-gradient(90deg, #7a5cff, #5b8dff);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+.re-note{ margin-top:10px; color:#7b6bb2; font-size:12px; }

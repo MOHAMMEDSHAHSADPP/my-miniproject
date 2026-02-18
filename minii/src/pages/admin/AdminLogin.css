@@ -1,0 +1,176 @@
+/* ===== MAIN CONTAINER ===== */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ===== LEFT SIDE (LOGIN CONTENT) ===== */
+.left {
+  width: 50%;
+  background-color: #ffffff;
+  padding: 3rem 4rem;   /* 🔽 reduced from huge px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.left h2 {
+  margin-bottom: 0.5rem;
+  color: #333333;
+  font-size: 1.6rem;    /* normal heading size */
+}
+
+/* Subtitle */
+.left .subtitle {
+  margin-bottom: 1.5rem;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+/* Labels */
+.left label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  color: #555555;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* Inputs */
+.left input[type="email"],
+.left input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cccccc;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.left input:focus {
+  border-color: #4a90e2;
+}
+
+/* Options row */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.options input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+.options .forgot {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn-black,
+.btn-google {
+  width: 100%;
+  padding: 0.75rem 0;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Sign In button */
+.btn-black {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.btn-black:hover {
+  background-color: #555555;
+}
+
+/* Google button */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #cccccc;
+}
+
+.btn-google img {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.6rem;
+}
+
+.btn-google:hover {
+  background-color: #f5f5f5;
+}
+
+/* Signup text */
+.signup-text {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+.signup-text a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RIGHT SIDE (IMAGE) ===== */
+.right {
+  width: 50%;
+  height: 100vh;
+  background-color: #0e0f14;
+  overflow: hidden;
+}
+
+.right-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== RESPONSIVE (SMALL SCREENS) ===== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    height: auto;
+  }
+
+  .left {
+    padding: 2rem;
+  }
+
+  .right {
+    height: 40vh;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "miniii-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd back && npm install && cd ../minii && npm install",
+    "dev": "concurrently \"npm run server --prefix back\" \"npm run dev --prefix minii\"",
+    "server": "npm run server --prefix back",
+    "client": "npm run dev --prefix minii"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

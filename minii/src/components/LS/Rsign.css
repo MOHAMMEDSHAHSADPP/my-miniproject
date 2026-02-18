@@ -1,0 +1,9 @@
+@import "./Rlogin.css";
+
+/* Extra specific overrides if needed can go here */
+.right-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

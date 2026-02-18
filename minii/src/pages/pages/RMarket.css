@@ -1,0 +1,303 @@
+.rmarket-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rmarket-header-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.rmarket-header-top h2 {
+    margin: 0;
+    color: #2d1b69;
+}
+
+.rmarket-tabs {
+    display: flex;
+    gap: 8px;
+    background: #fff;
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid rgba(120, 80, 255, 0.15);
+}
+
+.rmarket-tabs button {
+    border: none;
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #6b5aa6;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.rmarket-tabs button.active {
+    background: linear-gradient(135deg, #4b34c8, #7a5cff);
+    color: #fff;
+}
+
+.rmarket-loading {
+    text-align: center;
+    padding: 40px;
+    color: #8b7bb8;
+}
+
+/* SEARCH */
+.rmarket-search input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(120, 80, 255, 0.2);
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.rmarket-search input:focus {
+    border-color: #7a5cff;
+    box-shadow: 0 0 0 3px rgba(120, 80, 255, 0.1);
+}
+
+/* GRID */
+.rmarket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.rmarket-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(120, 80, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.rmarket-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(120, 80, 255, 0.15);
+}
+
+.rmarket-img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: #f0ecff;
+}
+
+.rmarket-info {
+    padding: 14px;
+}
+
+.rmarket-info h4 {
+    margin: 0 0 4px;
+    color: #2d1b69;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rmarket-category {
+    display: inline-block;
+    background: #efeaff;
+    color: #4b34c8;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.rmarket-price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #2d1b69;
+}
+
+.rmarket-seller {
+    font-size: 0.8rem;
+    color: #8b7bb8;
+    margin-top: 4px;
+}
+
+.rmarket-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #8b7bb8;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(120, 80, 255, 0.1);
+}
+
+/* SELL FORM */
+.rmarket-sell-form {
+    background: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(120, 80, 255, 0.15);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rmarket-sell-form h3 {
+    margin-top: 0;
+    color: #2d1b69;
+}
+
+.rmarket-sell-form form {
+    display: grid;
+    gap: 12px;
+}
+
+.rmarket-sell-form label {
+    font-weight: 600;
+    color: #544a84;
+    font-size: 0.9rem;
+}
+
+.rmarket-sell-form input,
+.rmarket-sell-form textarea {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    outline: none;
+}
+
+.rmarket-sell-form input:focus,
+.rmarket-sell-form textarea:focus {
+    border-color: #7a5cff;
+}
+
+.rmarket-btn-submit {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(135deg, #4b34c8, #7a5cff);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* DASHBOARD STATS */
+.rmarket-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.rmarket-stat-card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(120, 80, 255, 0.15);
+    text-align: center;
+}
+
+.rmarket-stat-card .stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2d1b69;
+}
+
+.rmarket-stat-card .stat-label {
+    font-size: 0.85rem;
+    color: #6b5aa6;
+    font-weight: 600;
+}
+
+.rmarket-stat-card.pending .stat-number {
+    color: #d69e2e;
+}
+
+.rmarket-stat-card.approved .stat-number {
+    color: #38a169;
+}
+
+.rmarket-stat-card.rejected .stat-number {
+    color: #e53e3e;
+}
+
+/* MY LISTINGS */
+.rmarket-my-list {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(120, 80, 255, 0.15);
+    padding: 20px;
+}
+
+.rmarket-my-list h3 {
+    margin-top: 0;
+    color: #2d1b69;
+}
+
+.rmarket-my-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0ecff;
+}
+
+.rmarket-my-item:last-child {
+    border-bottom: none;
+}
+
+.my-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-item-info b {
+    color: #2d1b69;
+}
+
+.my-item-info span {
+    color: #544a84;
+    font-size: 0.9rem;
+}
+
+.rmarket-category-sm {
+    font-size: 0.75rem;
+    color: #8b7bb8;
+    background: #f7f5ff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-top: 2px;
+}
+
+.rmarket-status {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.rmarket-status.pending {
+    background: #fffaf0;
+    color: #d69e2e;
+}
+
+.rmarket-status.approved {
+    background: #f0fff4;
+    color: #38a169;
+}
+
+.rmarket-status.rejected {
+    background: #fff5f5;
+    color: #e53e3e;
+}

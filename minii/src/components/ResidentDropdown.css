@@ -1,0 +1,33 @@
+
+.dd{ position:relative; }
+.dd-btn{
+  border:1px solid var(--border);
+  background:#fff;
+  padding:8px 12px;
+  border-radius:10px;
+}
+.dd-menu{
+  position:absolute;
+  right:0;
+  top:46px;
+  width:220px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.dd-group{
+  font-size:12px;
+  color: var(--muted);
+  padding:8px 10px 4px;
+}
+.dd-item{
+  display:block;
+  padding:10px;
+  border-radius:10px;
+}
+.dd-item:hover{
+  background: rgba(109,40,217,0.08);
+  color: var(--purple);
+}

@@ -1,0 +1,82 @@
+.vs-bg{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: radial-gradient(circle at 20% 10%, #eaf2ff 0%, transparent 35%),
+              radial-gradient(circle at 80% 30%, #ffeef5 0%, transparent 35%),
+              linear-gradient(180deg, #ffffff, #f7f9ff);
+  padding: 24px;
+}
+
+.vs-wrap{width:100%; max-width:520px;}
+
+.vs-card{
+  background:rgba(255,255,255,0.92);
+  border:1px solid rgba(15,23,42,0.08);
+  border-radius:20px;
+  padding:22px;
+  box-shadow: 0 20px 50px rgba(15,23,42,0.08);
+  backdrop-filter: blur(10px);
+}
+
+.vs-badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  background:#eef2ff;
+  color:#3730a3;
+}
+
+.vs-title{margin:12px 0 4px; font-size:24px; color:#0f172a;}
+.vs-sub{margin:0 0 16px; color:#475569;}
+
+.vs-msg{
+  margin:10px 0;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#fff7ed;
+  border:1px solid rgba(234,88,12,0.25);
+  color:#7c2d12;
+  font-weight:700;
+}
+
+.vs-label{display:block; margin:10px 0 6px; font-weight:700; color:#0f172a;}
+
+.vs-select{
+  width:100%;
+  height:44px;
+  border-radius:12px;
+  border:1px solid rgba(15,23,42,0.12);
+  padding:0 12px;
+  outline:none;
+  background:#fff;
+  color:#0f172a;
+}
+
+.vs-select:focus{
+  border-color:#6366f1;
+  box-shadow:0 0 0 4px rgba(99,102,241,0.15);
+}
+
+.vs-btn{
+  margin-top:16px;
+  width:100%;
+  height:46px;
+  border:none;
+  border-radius:12px;
+  font-weight:800;
+  color:#fff;
+  background:linear-gradient(90deg, #4f46e5, #7c3aed);
+  cursor:pointer;
+}
+
+.vs-btn:disabled{opacity:0.5; cursor:not-allowed;}
+
+.vs-foot{
+  margin-top:10px;
+  color:#64748b;
+  font-size:12px;
+}
